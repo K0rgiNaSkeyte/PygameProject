@@ -1,0 +1,2 @@
+class CurrentMap:
+    pass
