@@ -105,3 +105,11 @@ class DatabaseManager:
         conn.close()
 
         return scores
+
+    def clear_tables(self):
+        conn = sqlite3.connect(self.db_path)
+        cur = conn.cursor()
+        cur.execute("DELETE FROM game_scores")
+        cur.execute("DELETE FROM player data")
+        conn.commit()
+        conn.close()
