@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.1" orientation="orthogonal" renderorder="right-down" width="30" height="25" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" name="tileset_1bit" tilewidth="16" tileheight="16" tilecount="64" columns="8">
+  <image source="data/images/sprites/tileset_1bit.png" trans="898989" width="128" height="128"/>
+ </tileset>
+ <layer id="1" name="Слой тайлов 1" width="30" height="25">
+  <data encoding="base64" compression="zlib">
+   eJzFlE9LBDEMxecgTNVVUaGLK3NQ2T3ozT+XhYV+/09lBybwfLx02ip4+NFMm+Ql2W7TMAwpc5b5WtZauycmAZFy1fDREYO6V8A1fTN2nih+LU75bDpA3Z74Xv5Td/9L3eQwFc48ItjnmYsCs0+o9L109FTca+auQIvvPenZrG9X4mp4yuwyz2Lv0emXdc2/Bcv9QHtvy/4Iegfhq+oLZNvdiTAzJNL3gb5HETPzmXlZVs6FOQKtqoYS5m8zwTeZfVmLe1O+6r/FMzDd92Xdivw8dz5XOU2/dSac2+xQ8D815j9RzdPw8y6h/t6xEXWP1t41FcO9qp69Wa/lZh2V2/ZqNGq1FDhrr8+tyF26S8dCPbwXRQ1/gepjbdZeTy2/gQL7m6hnfDtxBt4sRqiTfezt5RwTrIjVEWjlOK8WrjuSbflZi8+4BpzVbN8UZshvBdb0DQwZcxg=
+  </data>
+ </layer>
+</map>
