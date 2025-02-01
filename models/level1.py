@@ -2,6 +2,7 @@ import pytmx
 import Basic_Level
 
 from utils.constans import MAPS_DIR
+from utils.constans import HERO_START_POS,
 
 
 class Level1(Basic_Level):
