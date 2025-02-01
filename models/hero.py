@@ -1,5 +1,6 @@
 import pygame
 from utils.game_object import GameObject
+from utils.constans import HERO_HEALTH, HERO_MAX_MANA, HERO_MIN_MANA
 
 
 class Hero(GameObject):
