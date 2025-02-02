@@ -2,6 +2,7 @@ from utils.text_object import TextObject
 from utils.button import Button
 from utils import config as c
 
+#Главное меню с пятью кнопками и лого
 
 class MainMenu:
     def create_menu(self):

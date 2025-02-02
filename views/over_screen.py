@@ -1,6 +1,6 @@
 import pygame
 
-
+#Меню проигрыша с тремя кнопками и лого
 def draw_game_over(screen):
     pygame.init()
     font = pygame.font.Font(None, 72)

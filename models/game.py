@@ -20,14 +20,6 @@ class Game:
         pygame.display.set_caption(caption)
         self.clock = pygame.time.Clock()
 
-    def update(self):
-        for o in self.objects:
-            o.update()
-
-    def draw(self):
-        for o in self.objects:
-            o.draw(self.screen)
-
     def handle_events(self):
         for event in pygame.event.get():
             match event.type:

@@ -1,6 +1,7 @@
 """
 https://www.webucator.com/blog/2015/03/python-color-constants-module/
 """
+#Цвета для объектов
 
 ALICEBLUE = (240, 248, 255)
 ANTIQUEWHITE = (250, 235, 215)
