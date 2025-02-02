@@ -1,4 +1,6 @@
 import pygame
+import sys
+from random import randint
 from utils.config import SCREEN_WIDTH as WIDTH
 from utils.config import SCREEN_HEIGHT as HEIGHT
 from models.enemy import EnemyInBattle
@@ -23,17 +25,17 @@ def draw_battle(screen, hero_image, enemy_image):
     screen.blit(enemy_name_surface, (WIDTH - 250, 100))
 
     # Отрисовка показателей здоровья и маны
-    health_surface = font.render(f"Здоровье: {hero.health}/{hero.max_health}  Мана: {hero.mana}/{hero.max_mana}", True,
+    health_surface = font.render(f"Здоровье: {hero.health}  Мана: {hero.mana}", True,
                                  "WHITE")
     enemy_health_surface = font.render(
-        f"Здоровье: {enemy.health}/{enemy.max_health}  Мана: {enemy.mana}/{enemy.max_mana}", True, "WHITE")
+        f"Здоровье: {enemy.health}  Мана: {enemy.mana}", True, "WHITE")
     screen.blit(health_surface, (50, 250))
     screen.blit(enemy_health_surface, (WIDTH - 250, 250))
 
     # Отрисовка кнопок действий
-    pygame.draw.rect(screen, GREEN, (50, HEIGHT - 100, 200, 50))
-    pygame.draw.rect(screen, GREEN, (300, HEIGHT - 100, 200, 50))
-    pygame.draw.rect(screen, GREEN, (550, HEIGHT - 100, 200, 50))
+    pygame.draw.rect(screen, "GREEN", (50, HEIGHT - 100, 200, 50))
+    pygame.draw.rect(screen, "GREEN", (300, HEIGHT - 100, 200, 50))
+    pygame.draw.rect(screen, "GREEN", (550, HEIGHT - 100, 200, 50))
 
     action_font = pygame.font.Font(None, 30)
     attack_surface = action_font.render("Атака", True, "BLACK")
