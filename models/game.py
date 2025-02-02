@@ -1,12 +1,19 @@
 import pygame
 import sys
 
+from level1 import Level1
+from level2 import Level2
+from level3 import Level3
+from views.battle_screen import draw_battle
+from views.over_screen import draw_game_over
+from views.pause_menu import draw_pause_menu
+from views.win_screen import draw_win
+
 
 class Game:
     def __init__(self, caption, width, height, frame_rate):
         self.frame_rate = frame_rate
         self.game_over = False
-        self.objects = []
         pygame.init()
         pygame.font.init()
         self.screen = pygame.display.set_mode((width, height))
