@@ -1,4 +1,4 @@
-MAPS_DIR = "data.maps"
+MAPS_DIR = "data/maps"
 SAVES_DIR = "saves"
 TILE_SIZE = 16
 HERO_START_POS = (16, 23)
