@@ -13,6 +13,7 @@ from views.win_screen import draw_win
 
 class Game:
     def __init__(self, caption, width, height, frame_rate):
+        self.screen = pygame.display.set_mode((width, height))
         self.frame_rate = frame_rate
         self.curr_map = "one.tmx"
         self.level_loader = LevelLoader("one.tmx")
@@ -21,7 +22,6 @@ class Game:
         self.enemies = self.level_loader.get_enemy_objects()  # Получаем врагов из уровня
         pygame.init()
         pygame.font.init()
-        self.screen = pygame.display.set_mode((width, height))
         pygame.display.set_caption(caption)
         self.clock = pygame.time.Clock()
 
@@ -78,12 +78,19 @@ class Game:
 
     def draw(self):
         self.screen.fill((0, 0, 0))
-        for layer in self.level_loader.map.visible_layers:
-            if isinstance(layer, pytmx.TileLayer):
+        visible_layers = list(self.level_loader.map.visible_layers)  # Преобразуем генератор в список
+
+        for layer in visible_layers:
+            if isinstance(layer, pytmx.TiledTileLayer):
+                layer_index = visible_layers.index(layer)  # Получаем индекс слоя
                 for x, y, gid in layer:
-                    tile = self.level_loader.map.get_tile_by_gid(gid)
-                    self.screen.blit(tile.image,
-                                     (x * self.level_loader.map.tilewidth, y * self.level_loader.map.tileheight))
+                    # Получаем тайл по GID
+                    tile = self.level_loader.map.get_tile_by_gid(gid)  # Используем правильный метод для получения тайла
+
+                    if tile:  # Проверяем, существует ли тайл
+                        self.screen.blit(tile.image,
+                                         (x * self.level_loader.map.tilewidth, y * self.level_loader.map.tileheight))
+
         pygame.draw.rect(self.screen, (255, 0, 0), self.player.get_rect())
 
         # Рисуем врагов, которые еще не были побеждены
@@ -91,6 +98,7 @@ class Game:
             if not enemy.defeated:
                 self.screen.blit(enemy.image,
                                  enemy.get_position())
+
     def handle_events(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:

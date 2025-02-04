@@ -6,10 +6,7 @@
  <tileset firstgid="65" name="extra-1bits" tilewidth="16" tileheight="16" tilecount="64" columns="8">
   <image source="../images/sprites/extra-1bits.png" width="128" height="128"/>
  </tileset>
- <tileset firstgid="129" name="creatures" tilewidth="16" tileheight="16" tilecount="320" columns="16">
-  <image source="../images/sprites/creatures.png" width="256" height="320"/>
- </tileset>
- <layer id="1" name="Слой тайлов 1" width="30" height="25" offsetx="0.184795" offsety="-0.299415">
+ <layer id="1" name="Слой тайлов 1" width="30" height="25" offsetx="0" offsety="0">
   <data encoding="base64" compression="zlib">
    eJy9VUlOxDAQ9AHJYRcgeVjkA6DkADeW40j5wIgbN57AH3g6tuTSVCodTyZIHErd416qu2xleudcn3CQ8F7sXH9JTU8I0msOXhfUMO8p4azYjZxrPNf5Aj5XbIxa4GQBPHEvqV8K3vc/eTNfW/j/MruFWIkpnt32feLsMOGogpzTzMw9Jg6/g+Mp4bKCfXKvhBNaX+yom4P7hNuEB+PsbkJn5UX+PkDvGzljfbFvZ+Ryjx83vEf4eDuhaPYpe+CdfAsPkPk/jP3fEh6L1V4d8TZiW6MXQ+P4DU34m6y1yhWMHGjaGDFANch4cdvv8Ur6RzfWHXH+Dno3niXSjhqvgbWGD95r4ch2PdHHT/hr0SG64VtibfldtRP9rN1Vn9psujfftfbo3FBvy1dYPNadwrI2U3tixxov8/O9sdbg/ZLeK2Ov2ltSPvV512DMMKdXTWfWj/mgtf7P6TfDumedC/Hzig4A7xdlZ50niLX0aylH92uNHpEsA3M0Yr0bz60zcRyxID76K5fGdAaOB6M2Sr3WYKZf8V5huA==
   </data>

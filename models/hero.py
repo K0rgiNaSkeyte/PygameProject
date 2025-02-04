@@ -14,7 +14,7 @@ class Hero(GameObject):
         return self.x, self.y
 
     def get_rect(self):
-        return pygame.Rect(self.x, self.y, self.width, self.height)
+        return pygame.Rect(self.x, self.y, 50, 50)
 
     def change_pos(self, newpos):
         self.x = newpos[0]
