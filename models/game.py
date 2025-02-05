@@ -77,20 +77,25 @@ class Game:
     #         self.load_win()
 
     def draw(self):
+        # Очищаем экран
         self.screen.fill((0, 0, 0))
-        visible_layers = list(self.level_loader.map.visible_layers)  # Преобразуем генератор в список
 
+        # Получаем список видимых слоев
+        visible_layers = list(self.level_loader.map.visible_layers)
+
+        # Отрисовываем каждый слой
         for layer in visible_layers:
             if isinstance(layer, pytmx.TiledTileLayer):
-                layer_index = visible_layers.index(layer)  # Получаем индекс слоя
                 for x, y, gid in layer:
-                    # Получаем тайл по GID
-                    tile = self.level_loader.map.get_tile_by_gid(gid)  # Используем правильный метод для получения тайла
+                    # Получаем изображение тайла по GID
+                    tile_image = self.level_loader.map.get_tile_image_by_gid(gid)
 
-                    if tile:  # Проверяем, существует ли тайл
-                        self.screen.blit(tile.image,
+                    if tile_image:  # Проверяем, существует ли изображение тайла
+                        # Отрисовываем тайл на экране
+                        self.screen.blit(tile_image,
                                          (x * self.level_loader.map.tilewidth, y * self.level_loader.map.tileheight))
 
+        # Отрисовываем игрока
         pygame.draw.rect(self.screen, (255, 0, 0), self.player.get_rect())
 
         # Рисуем врагов, которые еще не были побеждены

@@ -9,6 +9,7 @@ from utils.constans import HERO_HEALTH, HERO_MAX_MANA, HERO_MIN_MANA
 class Hero(GameObject):
     def __init__(self, position):
         self.x, self.y = position
+        self.speed = 5
 
     def get_pos(self):
         return self.x, self.y
@@ -26,6 +27,9 @@ class Hero(GameObject):
     def move(self, dx, dy):
         self.x += dx
         self.y += dy
+
+    def set_speed(self, new_speed):
+        self.speed = new_speed
 
 
 class HeroInBattle:
